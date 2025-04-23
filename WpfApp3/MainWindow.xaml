@@ -1,4 +1,4 @@
-﻿<Window x:Class="BudgetTracker.MainWindow"
+<Window x:Class="BudgetTracker.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="BUdget track" Height="450" Width="800">
@@ -10,7 +10,7 @@
             <TextBlock Text="Description                            Amount                   Type              Category                  Date"/>
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="txtDescription" Width="158" />
-                <TextBox x:Name="txtAmount" Width="119"/>
+                <TextBox x:Name="txtAmount" Width="119" PreviewTextInput="AmountTextBox_PreviewTextInput"/>
                 <ComboBox x:Name="cmbType" Width="76">
                     <ComboBoxItem Content="Income"/>
                     <ComboBoxItem Content="Expense"/>
