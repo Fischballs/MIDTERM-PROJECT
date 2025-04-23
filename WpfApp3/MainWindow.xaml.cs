@@ -103,10 +103,14 @@ namespace BudgetTracker
         }
 
         // para numbers ray ma input
-       // private void AmountTextBox_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
-        //{
-        //    e.Handled = !decimal.TryParse(e.Text, NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture, out _);
-        //}
+        private void AmountTextBox_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            // Allow only digits and one optional decimal point
+            if (!decimal.TryParse(((TextBox)sender).Text + e.Text, out _))
+            {
+                e.Handled = true; // block the input
+            }
+        }
 
         private void lstTransactions_SelectionChanged(object sender, SelectionChangedEventArgs e)
         { 

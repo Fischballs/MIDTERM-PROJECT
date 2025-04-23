@@ -10,7 +10,7 @@
             <TextBlock Text="Description                            Amount                   Type              Category                  Date"/>
             <StackPanel Orientation="Horizontal">
                 <TextBox x:Name="txtDescription" Width="158" />
-                <TextBox x:Name="txtAmount" Width="119"/>
+                <TextBox x:Name="txtAmount" Width="119" PreviewTextInput="AmountTextBox_PreviewTextInput"/>
                 <ComboBox x:Name="cmbType" Width="76">
                     <ComboBoxItem Content="Income"/>
                     <ComboBoxItem Content="Expense"/>
