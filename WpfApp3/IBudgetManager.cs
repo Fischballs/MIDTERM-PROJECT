@@ -1,5 +1,5 @@
 ﻿
-namespace BudgetTracker.nigga
+namespace BudgetTracker.ohaha
 {
     public interface IBudgetManager
     {
